@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+    <title>Tabla productos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <br>
+      <h1 class="text-center">Tabla de Productos</h1>
+      <br>
+    <table class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Foto</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+       <% lista.forEach(val => {%>
+        <tr>
+          <th scope="row"><%=val.id%></th>
+          <td><%=val.nombre%></td>
+          <td><%=val.precio%></td>
+          <td><img src=<%=val.foto%> alt="xd" width="80px" height="70px"></td>
+          <% }) %>
+          <br>
+      </tbody>
+    </table>
+    
+    <button class="btn btn-link"><a href="/api/productos/almacenar">Ir a Formulario</a></button>
+    </div>
+  </body>
+</html>
